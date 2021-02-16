@@ -13,7 +13,6 @@ namespace Gw2.Mapper
         /// Maps a string to a certain Object type
         /// </summary>
         /// <param name="objectToMap"></param>
-        /// <param name="type"></param>
         /// <returns></returns>
         T MapTo<T>(string objectToMap);
     }

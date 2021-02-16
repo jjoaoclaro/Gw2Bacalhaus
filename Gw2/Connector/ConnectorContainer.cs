@@ -14,7 +14,7 @@ namespace Gw2.Connector
         /// Configures Services for the connector
         /// </summary>
         /// <param name="services"></param>
-        public void ConfigureServices(IServiceCollection services)
+        public static void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IApiConnector, ApiConnector>();
         }

@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gw2</name>
+    </assembly>
+    <members>
+        <member name="T:Gw2.Commerce.Commerce">
+            <summary>
+            Object for commerce calls
+            </summary>
+        </member>
+        <member name="M:Gw2.Commerce.Commerce.GetDeliveryContent">
+            <summary>
+            Gets the Delivery Content from the delivery endpoint of GW2 API
+            </summary>
+        </member>
+        <member name="M:Gw2.Commerce.Commerce.GetCoins(System.Int32)">
+            <summary>
+            Gets the Exchange information of coins to gems exchange rate
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gw2.Commerce.Commerce.GetGems(System.Int32)">
+            <summary>
+            Gets the Exchange information of gems to coins exchange rate
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Gw2.Connector.ApiConnector">
+            <summary>
+            Guild Wars 2 Api Connector
+            </summary>
+        </member>
+        <member name="M:Gw2.Connector.ApiConnector.ApiCall(System.String)">
+            <summary>
+            Makes the Api Call for a specific endpoint
+            </summary>
+            <param name="endpoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gw2.Connector.ApiConnector.ApiCall(System.String,System.String)">
+            <summary>
+            Makes the Api Call for a specific endpoint
+            </summary>
+            <param name="endpoint"></param>
+            <param name="apiKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Gw2.Connector.ConnectorContainer">
+            <summary>
+            IOT Container
+            </summary>
+        </member>
+        <member name="M:Gw2.Connector.ConnectorContainer.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures Services for the connector
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Gw2.Connector.IApiConnector">
+            <summary>
+            Interface for Api Connector
+            </summary>
+        </member>
+        <member name="M:Gw2.Connector.IApiConnector.ApiCall(System.String)">
+            <summary>
+            Makes the Api Call for a specific endpoint
+            </summary>
+            <param name="endpoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gw2.Connector.IApiConnector.ApiCall(System.String,System.String)">
+            <summary>
+            Makes the Api Call for a specific endpoint
+            </summary>
+            <param name="endpoint"></param>
+            <param name="apiKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Gw2.Mapper.ApiMapper">
+            <summary>
+            Mapper for Guild Wars 2 Api
+            </summary>
+        </member>
+        <member name="M:Gw2.Mapper.ApiMapper.MapTo``1(System.String)">
+            <summary>
+            Maps a string to a certain Object type
+            </summary>
+            <param name="objectToMap"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Gw2.Mapper.IApiMapper">
+            <summary>
+            Interface for mappers for Guild Wars 2 Api
+            </summary>
+        </member>
+        <member name="M:Gw2.Mapper.IApiMapper.MapTo``1(System.String)">
+            <summary>
+            Maps a string to a certain Object type
+            </summary>
+            <param name="objectToMap"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Gw2.Models.Commerce.DeliveryContent">
+            <summary>
+            GW2 Delivery Content
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.DeliveryContent.Coins">
+            <summary>
+            Quantity of coins for delivery
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.DeliveryContent.Items">
+            <summary>
+            Items available for delivery
+            </summary>
+        </member>
+        <member name="T:Gw2.Models.Commerce.ExchangeInformation">
+            <summary>
+            Exchange information of Gems
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.ExchangeInformation.CoinsPerGem">
+            <summary>
+            Number of coins for a gem
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.ExchangeInformation.Quantity">
+            <summary>
+            Quantity
+            </summary>
+        </member>
+        <member name="T:Gw2.Models.Commerce.Item">
+            <summary>
+            GW2 commerce Item
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.Item.Id">
+            <summary>
+            Id of the Item
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.Item.Count">
+            <summary>
+            Count of the Items
+            </summary>
+        </member>
+        <member name="T:Gw2.Models.Commerce.Listing">
+            <summary>
+            Listing information
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.Listing.Listings">
+            <summary>
+            Number of individual listings of the same price
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.Listing.UnitPrice">
+            <summary>
+            Unit price 
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.Listing.Quantity">
+            <summary>
+            Total quantity of this listing
+            </summary>
+        </member>
+        <member name="T:Gw2.Models.Commerce.ListingItem">
+            <summary>
+            Listing item information
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.ListingItem.Id">
+            <summary>
+            Id of the item
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.ListingItem.Buys">
+            <summary>
+            Collection of Buying Listings
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.ListingItem.Sells">
+            <summary>
+            Collection of Selling Listings
+            </summary>
+        </member>
+    </members>
+</doc>

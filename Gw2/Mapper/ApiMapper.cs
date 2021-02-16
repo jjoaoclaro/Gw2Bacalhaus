@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
@@ -10,11 +11,17 @@ namespace Gw2.Mapper
     /// </summary>
     public class ApiMapper : IApiMapper
     {
+        private readonly ILogger<ApiMapper> logger;
+
+        public ApiMapper(ILogger<ApiMapper> logger)
+        {
+            this.logger = logger;
+        }
+
         /// <summary>
         /// Maps a string to a certain Object type
         /// </summary>
         /// <param name="objectToMap"></param>
-        /// <param name="type"></param>
         /// <returns></returns>
         public T MapTo<T>(string objectToMap)
         {
@@ -31,6 +38,7 @@ namespace Gw2.Mapper
             }
             catch (Exception e)
             {
+                logger.LogError("Mapping failed: ", objectToMap);
                 return default(T);
             }
         }
