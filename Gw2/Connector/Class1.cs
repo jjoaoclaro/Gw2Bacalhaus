@@ -10,11 +10,11 @@ namespace Gw2.Connector
     class Class1
     {
         //private Commerce commerce;
-
         [SetUp]
         public void Setup()
         {
             //commerce = new Mock<IApiConnector>();
+            
         }
 
         [Test]

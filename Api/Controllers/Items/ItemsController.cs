@@ -10,7 +10,7 @@ namespace Api.Controllers.Items
 {
     [ApiController]
     [Route("[controller]")]
-    public class ItemsController : Controller
+    public class ItemsController : ControllerBase
     {
         private IItemsManager itemsManager;
         private readonly ILogger<ItemsController> _logger;
@@ -29,7 +29,7 @@ namespace Api.Controllers.Items
         //    return Ok(result);
         //}
 
-        [HttpGet("{id}")]
+        [HttpGet("/{id}")]
         public IActionResult GetItem(string id)
         {
             var result = itemsManager.GetItem(id);

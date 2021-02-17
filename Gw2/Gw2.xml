@@ -186,5 +186,15 @@
             Collection of Selling Listings
             </summary>
         </member>
+        <member name="P:Gw2.Models.Commerce.Order.UnitPrice">
+            <summary>
+            Unit price 
+            </summary>
+        </member>
+        <member name="P:Gw2.Models.Commerce.Order.Quantity">
+            <summary>
+            Total quantity of this listing
+            </summary>
+        </member>
     </members>
 </doc>
